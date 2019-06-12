@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("nhập số phần tử trong mảng"));
+    let taoMang = new Array();
+    for(i=0;i<num;i++) {
+        num1 = prompt("nhập 1 số bất kỳ");
+        if (num1 % 2 == 0) {
+            taoMang.push(num1+'-');
+        }
+        else {
+            taoMang.push(num1);
+        }
+    }
+    alert(taoMang.join(""))
+</script>
+</body>
+</html>

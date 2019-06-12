@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num=parseInt(prompt('Nhập số lần chuyển đổi'));
+    var x=0;
+    var count=0;
+    var array=[];
+    var arraynew=[];
+    var word='';
+    var UPPER='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWPER='abcdefghijklmnopqrstuvwxyz';
+    while(num<1)
+    {
+        num=parseInt(prompt('Mời nhập lại'));
+    }
+    while (count!=num)
+    {
+        array[x]=prompt('Nhập phần tử thứ '+(x+1)+' =');
+        x++;
+        count++;
+    }
+    for(var i=0;i<array.length;i++)
+    {
+        word='';
+        for(var j=0;j<array[i].length;j++)
+        {
+            if(UPPER.indexOf(array[i][j])!=-1)
+            {
+                word+=array[i][j].toLowerCase();
+            }
+            else if(LOWPER.indexOf(array[i][j])!=-1)
+            {
+                word+=array[i][j].toUpperCase();
+            }
+            else
+            {
+                word+=array[i][j];
+            }
+        }
+        arraynew.push(word);
+    }
+    alert(arraynew);
+</script>
+</body>
+</html>
